@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Unsemantic CSS Framework</title>
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<!-- CSS Code -->
+<link rel="stylesheet" href="css/unsemantic-grid.css" />
+<link rel="stylesheet" href="css/normalize.css" />
+
+<link rel="stylesheet" href="css/compile.css">
+<link rel="stylesheet" href="css/mix.css">
+
+
+<!-- JS Code -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://mixitup.io/js/dependencies.js"></script>
+<script type="text/javascript" src="http://mixitup.io/js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="http://mixitup.io/js/main.js"></script>
+<!-- <script src="js/initialization.js"></script>	 -->	
+
+</head>
+
+
+</head>
+
+<body>
+
+<section id="SandBox" class="anim150">
+	<nav class="wrapper ns wf">
+		<div class="set ib">
+			<h5>Filter</h5>
+			<ul>
+				<li class="button filter anim150 active" data-role="button" data-filter="all">View All</li>
+				<li class="button filter anim150" data-tole="button" data-filter="dogs">Dogs</li>
+				<li class="button filter anim150" data-filter="cats">Cats</li>
+				<li class="button filter anim150" data-filter="krakens">Krakens</li>
+				<li class="break"></li>
+			</ul>
+		</div>
+		<div class="set ib">
+			<h5>Sort</h5>
+			<ul>
+				<li class="button sort arrow anim150" data-sort="data-name" data-order="desc"><span>Name <div class="arr_desc ib"></div></span></li>
+				<li class="button sort arrow anim150" data-sort="data-name" data-order="asc"><span>Name <div class="arr_asc ib"></div></span></li>
+				<li class="button sort anim150" data-sort="random">Randomize</li>
+				<li class="layout_wrapper hide">
+					<div class="button ib layout anim150 active" id="GoGrid"></div>
+					<div class="button ib layout anim150" id="GoList"></div>
+				</li>
+				<li class="break"></li>
+			</ul>
+		</div>
+		<div class="break ib"></div>
+	</nav>
+	<div class="wrapper">
+		<ul class="wf ns">
+			<li class="mix dogs mix_all" data-name="Walter" data-age="8" style="display: inline-block; opacity: 1;">
+				<div class="content anim150">
+					<h5>Walter</h5>
+					<div class="spinner wf">
+						<span class="side s_left">
+							<span class="fill"></span>
+						</span>
+						<span class="side s_right">
+							<span class="fill"></span>
+						</span>
+					</div>
+					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/walter.jpg);">
+						<img src="http://mixitup.io/im/walter.jpg" onload="imgLoaded($(this))">
+					</div>
+				</div>
+				<h4>Age: 8</h4>
+			</li>
+			<li class="mix cats mix_all" data-name="Bucky" data-age="9" style="display: inline-block; opacity: 1;">
+				<div class="content">
+					<h5>Bucky</h5>
+					<div class="spinner wf">
+						<span class="side s_left">
+							<span class="fill"></span>
+						</span>
+						<span class="side s_right">
+							<span class="fill"></span>
+						</span>
+					</div>
+					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/bucky.jpg);">
+						<img src="http://mixitup.io/im/bucky.jpg" onload="imgLoaded($(this))">
+					</div>
+				</div>
+				<h4>Age: 9</h4>
+			</li>
+			<li class="mix cats mix_all" data-name="Greg" data-age="7" style="display: inline-block; opacity: 1;">
+				<div class="content">
+					<h5>Greg</h5>
+					<div class="spinner wf">
+						<span class="side s_left">
+							<span class="fill"></span>
+						</span>
+						<span class="side s_right">
+							<span class="fill"></span>
+						</span>
+					</div>
+					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/greg.jpg);">
+						<img src="http://mixitup.io/im/greg.jpg" onload="imgLoaded($(this))">
+					</div>
+				</div>
+				<h4>Age: 7</h4>
+			</li>
+			<li class="mix dogs mix_all" data-name="Abby" data-age="2" style="display: inline-block; opacity: 1;">
+				<div class="content">
+					<h5>Abby</h5>
+					<div class="spinner wf">
+						<span class="side s_left">
+							<span class="fill"></span>
+						</span>
+						<span class="side s_right">
+							<span class="fill"></span>
+						</span>
+					</div>
+					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/abby.jpg);">
+						<img src="http://mixitup.io/im/abby.jpg" onload="imgLoaded($(this))">
+					</div>
+				</div>
+				<h4>Age: 2</h4>
+			</li>
+			<li class="mix dogs mix_all" data-name="Molly" data-age="5" style="display: inline-block; opacity: 1;">
+				<div class="content">
+					<h5>Molly</h5>
+					<div class="spinner wf">
+						<span class="side s_left">
+							<span class="fill"></span>
+						</span>
+						<span class="side s_right">
+							<span class="fill"></span>
+						</span>
+					</div>
+					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/francis.jpg);">
+						<img src="http://mixitup.io/im/francis.jpg" onload="imgLoaded($(this))">
+					</div>
+				</div>
+				<h4>Age: 5</h4>
+			</li>
+			<li class="mix krakens mix_all" data-name="Kraken" data-age="3978" style="display: inline-block; opacity: 1;">
+				<div class="content">
+					<h5>The Kraken</h5>
+					<div class="spinner wf">
+						<span class="side s_left">
+							<span class="fill"></span>
+						</span>
+						<span class="side s_right">
+							<span class="fill"></span>
+						</span>
+					</div>
+					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/kraken.jpg);">
+						<img src="http://mixitup.io/im/kraken.jpg" onload="imgLoaded($(this))">
+					</div>
+				</div>
+				<h4>Age: 3978</h4>
+			</li>
+			<li class="mix dogs mix_all" data-name="Lady" data-age="3" style="display: inline-block; opacity: 1;">
+				<div class="content">
+					<h5>Lady</h5>
+					<div class="spinner wf">
+						<span class="side s_left">
+							<span class="fill"></span>
+						</span>
+						<span class="side s_right">
+							<span class="fill"></span>
+						</span>
+					</div>
+					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/lady.jpg);">
+						<img src="http://mixitup.io/im/lady.jpg" onload="imgLoaded($(this))">
+					</div>
+				</div>
+				<h4>Age: 3</h4>
+			</li>
+			<li class="mix cats mix_all" data-name="Theo" data-age="1" style="display: inline-block; opacity: 1;">
+				<div class="content">
+					<h5>Theo</h5>
+					<div class="spinner wf">
+						<span class="side s_left">
+							<span class="fill"></span>
+						</span>
+						<span class="side s_right">
+							<span class="fill"></span>
+						</span>
+					</div>
+					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/theo.jpg);">
+						<img src="http://mixitup.io/im/theo.jpg" onload="imgLoaded($(this))">
+					</div>
+				</div>
+				<h4>Age: 1</h4>
+			</li>
+			
+			<li class="gap ib"></li>
+			<li class="gap ib"></li>
+			<li class="gap ib"></li>
+			<li class="break ib"></li>
+		</ul>
+	</div>
+</section>
+
+</body>
+</html>

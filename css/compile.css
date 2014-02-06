@@ -1,0 +1,303 @@
+@-webkit-keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+@font-face {
+  font-family: 'blackoutmidnight';
+  src: url('../font/code/code_bold-webfont.eot');
+  src: url('../font/code/code_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../font/code/code_bold-webfont.woff') format('woff'), url('../font/code/code_bold-webfont.ttf') format('truetype'), url('../font/code/code_bold-webfont.svg#code_boldregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'blackoutmidnight';
+  src: url('../font/blackout/blackout-midnight-webfont.eot');
+  src: url('../font/blackout/blackout-midnight-webfont.eot?#iefix') format('embedded-opentype'), url('../font/blackout/blackout-midnight-webfont.woff') format('woff'), url('../font/blackout/blackout-midnight-webfont.ttf') format('truetype'), url('../font/blackout/blackout-midnight-webfont.svg#blackoutmidnight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'consolasregular';
+  src: url('../font/consolas/consolas-webfont.eot');
+  src: url('../font/consolas/consolas-webfont.eot?#iefix') format('embedded-opentype'), url('../font/consolas/consolas-webfont.woff') format('woff'), url('../font/consolas/consolas-webfont.ttf') format('truetype'), url('../font/consolas/consolas-webfont.svg#consolasregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+a {
+  background: transparent;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+mark {
+  background: yellow;
+  color: black;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre-wrap;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  background: #adada5;
+  /*padding: 0 20px;*/
+
+}
+body h1 {
+  font-size: 60px;
+  line-height: 78px;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  font-family: 'blackoutmidnight';
+  color: #93a42a;
+  -webkit-animation: hue 8s infinite linear;
+  background: -webkit-linear-gradient(92deg, #7db51c, #93a42a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body h2 {
+  font-size: 28px;
+  line-height: 26px;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  font-family: 'blackoutmidnight';
+  color: #77715d;
+}
+body h3 {
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 26px;
+  margin-bottom: 0;
+  font-family: 'blackoutmidnight';
+  color: #818078;
+}
+body h4,
+body h5,
+body h6 {
+  line-height: 26px;
+  margin-top: 26px;
+  margin-bottom: 0px;
+  font-family: 'blackoutmidnight';
+  font-weight: bold;
+}
+body h4 {
+  font-size: 16px;
+  color: #046d8b;
+  text-transform: uppercase;
+}
+body h5 {
+  font-size: 14px;
+  color: #464132;
+}
+body h6 {
+  font-size: 14px;
+  color: #93a42a;
+  text-transform: uppercase;
+}
+body p,
+body ul,
+body ol,
+body hr {
+  margin-top: 0px;
+  margin-bottom: 26px;
+}
+body ul {
+  padding-left: 16px;
+}
+body ol {
+  padding-left: 20px;
+}
+body small,
+body aside {
+  font-size: 11px;
+}
+body pre,
+body code {
+  font-family: "DejaVu Sans Mono", Monaco, Consolas, monospace;
+}
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  body .twozeroonefour h1 {
+    font-size: 76px;
+    text-align: center;
+  }
+  body .twozeroonefour h1,
+  body .twozeroonefour h2,
+  body .twozeroonefour h3,
+  body .twozeroonefour h4,
+  body .twozeroonefour h5,
+  body .twozeroonefour h6 {
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+  body .twozeroonefour #bx-pager a img {
+    border: 4px solid white;
+    float: left;
+    margin: 0 1.5% 1.5% 0;
+    width: 20%;
+  }
+}
