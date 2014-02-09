@@ -1,0 +1,323 @@
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.wrapper .narrow {
+  max-width: 860px;
+}
+#SandBox {
+  padding: 0 0 20px 0;
+  overflow: visible;
+}
+#SandBox .arr_desc,
+#SandBox .arr_asc {
+  content: '';
+  position: relative;
+  width: 18px;
+  height: 18px;
+  top: 4px;
+  margin-left: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
+}
+#SandBox .arr_desc::after,
+#SandBox .arr_asc::after {
+  position: absolute;
+  content: '';
+  width: 4px;
+  height: 6px;
+  right: 7px;
+  top: 4px;
+  background: rgba(0, 0, 0, 0.65);
+}
+#SandBox .arr_desc::before,
+#SandBox .arr_asc::before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  right: 4px;
+  top: 10px;
+  border: 5.5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.65);
+}
+#SandBox .arr_asc::before {
+  bottom: 10px;
+  top: auto;
+  border-top-color: transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.65);
+}
+#SandBox .arr_asc::after {
+  top: auto;
+  bottom: 4px;
+}
+#SandBox .active .arr_desc,
+#SandBox .active .arr_asc {
+  background: #aedf16;
+}
+#SandBox .active .arr_desc::after,
+#SandBox .active .arr_asc::after {
+  background: #121212;
+}
+#SandBox .active .arr_desc::before {
+  border-top-color: #121212;
+}
+#SandBox .active .arr_asc::before {
+  border-bottom-color: #121212;
+}
+#SandBox ul {
+  text-align: justify;
+  list-style-type: none;
+  font-size: 0.1px;
+  line-height: 0;
+}
+#SandBox ul:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+#SandBox nav {
+  text-align: justify;
+}
+#SandBox .set {
+  width: 23%;
+  vertical-align: top;
+}
+#SandBox .set h5 {
+  font-size: 13px;
+  color: #898989;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+#SandBox .button {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  height: 36px;
+  width: 48%;
+  margin-bottom: 4%;
+  background: #222222;
+  cursor: pointer;
+  vertical-align: top;
+  text-align: center;
+  line-height: 36px;
+  font-size: 13px;
+  color: #898989;
+  font-weight: 400;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+#SandBox .button.layout {
+  width: 38px;
+  height: 33px;
+  padding-top: 4px;
+  overflow: hidden;
+  margin-right: 3%;
+  vertical-align: top;
+}
+#SandBox .button.layout ul {
+  text-align: center;
+}
+#SandBox .button.layout ul li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 3px;
+  background: #666666;
+  vertical-align: top;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+#SandBox .button.layout:hover li {
+  background: #cccccc;
+}
+#SandBox .button.layout.active li {
+  background: #aedf16;
+}
+#SandBox .mix,
+#SandBox .gap {
+  width: 31.5%;
+  max-width: 31.5%;
+  margin-bottom: 2%;
+  -webkit-transition: max-width 500ms ease-in-out, height 500ms ease-in-out;
+  -moz-transition: max-width 500ms ease-in-out, height 500ms ease-in-out;
+  -ms-transition: max-width 500ms ease-in-out, height 500ms ease-in-out;
+  -o-transition: max-width 500ms ease-in-out, height 500ms ease-in-out;
+  transition: max-width 500ms ease-in-out, height 500ms ease-in-out;
+}
+#SandBox .mix {
+  display: none;
+  opacity: 0;
+}
+#SandBox .mix .content {
+  position: relative;
+  padding-top: 58%;
+  overflow: hidden;
+  background: #1e1e1e;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 12px black;
+  -moz-box-shadow: 0 0 12px black;
+  -ms-box-shadow: 0 0 12px black;
+  -o-box-shadow: 0 0 12px black;
+  box-shadow: 0 0 12px black;
+}
+#SandBox .mix .content h5 {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+#SandBox .mix .content h4 {
+  display: none;
+}
+#SandBox .mix .content .img_wrapper {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-repeat: no-repeat;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100% !important;
+  -ms-background-size: auto 100%;
+  -o-background-size: auto 100%;
+  background-size: auto 100%;
+}
+#SandBox .mix .content .img_wrapper.loaded {
+  opacity: 1;
+}
+#SandBox .mix .content img {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  height: 1px;
+  width: 1px;
+}
+#SandBox .mix.full_width {
+  position: relative;
+  max-width: 100%;
+  width: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  margin-bottom: 0;
+}
+#SandBox .mix.full_width .content {
+  max-width: 120px;
+  overflow: visible;
+  padding-top: 80px;
+  background: none;
+  border: 0;
+  -webit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+#SandBox .mix.full_width .img_wrapper {
+  max-width: 120px;
+  max-height: 80px;
+}
+#SandBox .mix.full_width img {
+  max-width: 120px;
+  max-height: 80px;
+  display: none;
+}
+#SandBox .gap {
+  display: inline-block;
+  margin-bottom: 0;
+}
+/* ------ GLOBAL CSS3 TRANSITIONS ----- */
+
+.anim150 {
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.ease150 {
+  -webkit-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.anim300 {
+  -webkit-transition: all 350ms ease-in-out;
+  -moz-transition: all 350ms ease-in-out;
+  -ms-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+.anim500 {
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+@media screen and (max-width: 1024px) {
+  .touch #SandBox {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .touch #SandBox {
+    height: 680px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .touch #SandBox {
+    height: 430px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #SandBox .mix h5 {
+    top: 4px;
+    left: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+}
+/* 3 PER ROW */
+
+@media screen and (max-width: 940px) {
+  #SandBox .mix,
+  #SandBox .gap {
+    width: 49%;
+    max-width: 49%;
+    margin-bottom: 2%;
+  }
+}

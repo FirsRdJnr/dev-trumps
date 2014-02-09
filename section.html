@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<meta user="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 <title>Unsemantic CSS Framework</title>
 
 <!--[if lt IE 9]>
@@ -13,18 +13,15 @@
 
 <!-- CSS Code -->
 <link rel="stylesheet" href="css/unsemantic-grid.css" />
-<link rel="stylesheet" href="css/normalize.css" />
-
 <link rel="stylesheet" href="css/compile.css">
-<link rel="stylesheet" href="css/mix.css">
+<link rel="stylesheet" href="css/new.css">
 
 
 <!-- JS Code -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="http://mixitup.io/js/dependencies.js"></script>
-<script type="text/javascript" src="http://mixitup.io/js/jquery.mixitup.min.js"></script>
-<script type="text/javascript" src="http://mixitup.io/js/main.js"></script>
-<!-- <script src="js/initialization.js"></script>	 -->	
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mixitup.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="js/initialization.js"></script>
 
 </head>
 
@@ -38,165 +35,104 @@
 		<div class="set ib">
 			<h5>Filter</h5>
 			<ul>
-				<li class="button filter anim150 active" data-role="button" data-filter="all">View All</li>
-				<li class="button filter anim150" data-tole="button" data-filter="dogs">Dogs</li>
-				<li class="button filter anim150" data-filter="cats">Cats</li>
-				<li class="button filter anim150" data-filter="krakens">Krakens</li>
-				<li class="break"></li>
+				<li class="button filter active" data-role="button" data-filter="all">View All</li>
+				<li class="button filter" data-role="button" data-filter="Architecture">Architecture</li>
+				<li class="button filter" data-role="button" data-filter="Frog3">Frog3</li>
+				<li class="button filter" data-role="button" data-filter="What the Frog">What the Frog</li>
+				<li class="button filter" data-role="button" data-filter="Frogfathers">Frogfathers</li>
+				<li class="button filter" data-role="button" data-filter="Reservoir Frogs">Reservoir Frogs</li>
+				<li class="button filter" data-role="button" data-filter="Cerberus">Cerberus</li>
 			</ul>
 		</div>
 		<div class="set ib">
 			<h5>Sort</h5>
 			<ul>
-				<li class="button sort arrow anim150" data-sort="data-name" data-order="desc"><span>Name <div class="arr_desc ib"></div></span></li>
-				<li class="button sort arrow anim150" data-sort="data-name" data-order="asc"><span>Name <div class="arr_asc ib"></div></span></li>
-				<li class="button sort anim150" data-sort="random">Randomize</li>
-				<li class="layout_wrapper hide">
-					<div class="button ib layout anim150 active" id="GoGrid"></div>
-					<div class="button ib layout anim150" id="GoList"></div>
+				<li class="button sort arrow" data-sort="data-user" data-order="desc"><span>user <div class="arr_desc ib"></div></span></li>
+				<li class="button sort arrow" data-sort="data-user" data-order="asc"><span>user <div class="arr_asc ib"></div></span></li>
+				<li class="button sort" data-sort="random">Randomize</li>
+				<li>
+					<div class="button ib layout active" id="GoGrid">Grid</div>
+					<div class="button ib layout" id="GoList">list</div>
 				</li>
 				<li class="break"></li>
 			</ul>
 		</div>
-		<div class="break ib"></div>
 	</nav>
+
+
 	<div class="wrapper">
-		<ul class="wf ns">
-			<li class="mix dogs mix_all" data-name="Walter" data-age="8" style="display: inline-block; opacity: 1;">
-				<div class="content anim150">
-					<h5>Walter</h5>
-					<div class="spinner wf">
-						<span class="side s_left">
-							<span class="fill"></span>
-						</span>
-						<span class="side s_right">
-							<span class="fill"></span>
-						</span>
-					</div>
-					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/walter.jpg);">
-						<img src="http://mixitup.io/im/walter.jpg" onload="imgLoaded($(this))">
+		<ul>
+			<li class="mix Architecture" data-user="victoria.baron">
+				<div class="content">
+					<h5>V</h5>
+					<div class="img_wrapper loaded" style="background-image: url(img/victoria.baron.png);">
+						<img src="img/victoria.baron.png">
 					</div>
 				</div>
-				<h4>Age: 8</h4>
+				<ul class="skills"><li>JS</li><li>IOS</li><li>Frontend, Man flu some description to explain what you do and who you are</li></ul>
 			</li>
-			<li class="mix cats mix_all" data-name="Bucky" data-age="9" style="display: inline-block; opacity: 1;">
+			<li class="mix What the Frog" data-user="tom.chapman">
 				<div class="content">
 					<h5>Bucky</h5>
-					<div class="spinner wf">
-						<span class="side s_left">
-							<span class="fill"></span>
-						</span>
-						<span class="side s_right">
-							<span class="fill"></span>
-						</span>
-					</div>
-					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/bucky.jpg);">
-						<img src="http://mixitup.io/im/bucky.jpg" onload="imgLoaded($(this))">
+					<div class="img_wrapper loaded" style="background-image: url(img/tom.chapman.png);">
+						<img src="img/tom.chapman.png">
 					</div>
 				</div>
-				<h4>Age: 9</h4>
+				<ul class="skills"><li>JS</li><li>IOS</li><li>Frontend, Man flu some description to explain what you do and who you are</li></ul>
 			</li>
-			<li class="mix cats mix_all" data-name="Greg" data-age="7" style="display: inline-block; opacity: 1;">
+			<li class="mix Architecture" data-user="lee.mills">
 				<div class="content">
-					<h5>Greg</h5>
-					<div class="spinner wf">
-						<span class="side s_left">
-							<span class="fill"></span>
-						</span>
-						<span class="side s_right">
-							<span class="fill"></span>
-						</span>
-					</div>
-					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/greg.jpg);">
-						<img src="http://mixitup.io/im/greg.jpg" onload="imgLoaded($(this))">
+					<h5>Lee Mills</h5>
+					<div class="img_wrapper loaded" style="background-image: url(img/lee.mills.jpg);">
+						<img src="img/lee.mills.jpg">
 					</div>
 				</div>
-				<h4>Age: 7</h4>
+				<ul class="skills"><li>JS</li><li>IOS</li><li>Frontend, Man flu some description to explain what you do and who you are</li></ul>
 			</li>
-			<li class="mix dogs mix_all" data-name="Abby" data-age="2" style="display: inline-block; opacity: 1;">
+			<li class="mix Frog3" data-user="rob.peckett">
 				<div class="content">
-					<h5>Abby</h5>
-					<div class="spinner wf">
-						<span class="side s_left">
-							<span class="fill"></span>
-						</span>
-						<span class="side s_right">
-							<span class="fill"></span>
-						</span>
-					</div>
-					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/abby.jpg);">
-						<img src="http://mixitup.io/im/abby.jpg" onload="imgLoaded($(this))">
+					<h5>El Scawp</h5>
+					<div class="img_wrapper loaded" style="background-image: url(img/rob.peckett.jpg);">
+						<img src="img/rob.peckett.jpg">
 					</div>
 				</div>
-				<h4>Age: 2</h4>
+				<ul class="skills"><li>JS</li><li>IOS</li><li>Frontend, Man flu some description to explain what you do and who you are</li></ul>
 			</li>
-			<li class="mix dogs mix_all" data-name="Molly" data-age="5" style="display: inline-block; opacity: 1;">
+			<li class="mix Frogfathers" data-user="sam.warren">
 				<div class="content">
-					<h5>Molly</h5>
-					<div class="spinner wf">
-						<span class="side s_left">
-							<span class="fill"></span>
-						</span>
-						<span class="side s_right">
-							<span class="fill"></span>
-						</span>
-					</div>
-					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/francis.jpg);">
-						<img src="http://mixitup.io/im/francis.jpg" onload="imgLoaded($(this))">
+					<h5>Sam Warren</h5>
+					<div class="img_wrapper loaded" style="background-image: url(img/sam.warren.jpg);">
+						<img src="img/sam.warren.jpg">
 					</div>
 				</div>
-				<h4>Age: 5</h4>
+				<ul class="skills"><li>JS</li><li>IOS</li><li>Frontend, Man flu some description to explain what you do and who you are</li></ul>
 			</li>
-			<li class="mix krakens mix_all" data-name="Kraken" data-age="3978" style="display: inline-block; opacity: 1;">
+			<li class="mix Architecture" data-user="dave.dangerous">
 				<div class="content">
-					<h5>The Kraken</h5>
-					<div class="spinner wf">
-						<span class="side s_left">
-							<span class="fill"></span>
-						</span>
-						<span class="side s_right">
-							<span class="fill"></span>
-						</span>
-					</div>
-					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/kraken.jpg);">
-						<img src="http://mixitup.io/im/kraken.jpg" onload="imgLoaded($(this))">
+					<h5>Dangerous Judas Dave</h5>
+					<div class="img_wrapper loaded" style="background-image: url(img/dave.dangerous.jpg);">
+						<img src="img/dave.dangerous.jpg">
 					</div>
 				</div>
-				<h4>Age: 3978</h4>
+				<ul class="skills"><li>JS</li><li>IOS</li><li>Frontend, Man flu some description to explain what you do and who you are</li></ul>
 			</li>
-			<li class="mix dogs mix_all" data-name="Lady" data-age="3" style="display: inline-block; opacity: 1;">
+			<li class="mix Reservoir Frogs" data-user="dave.sinbad">
 				<div class="content">
-					<h5>Lady</h5>
-					<div class="spinner wf">
-						<span class="side s_left">
-							<span class="fill"></span>
-						</span>
-						<span class="side s_right">
-							<span class="fill"></span>
-						</span>
-					</div>
-					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/lady.jpg);">
-						<img src="http://mixitup.io/im/lady.jpg" onload="imgLoaded($(this))">
+					<h5>Dave Hodgkinson</h5>
+					<div class="img_wrapper loaded" style="background-image: url(img/dave.sinbad.jpg);">
+						<img src="img/dave.sinbad.jpg">
 					</div>
 				</div>
-				<h4>Age: 3</h4>
+				<ul class="skills"><li>JS</li><li>IOS</li><li>Frontend, Man flu some description to explain what you do and who you are</li></ul>
 			</li>
-			<li class="mix cats mix_all" data-name="Theo" data-age="1" style="display: inline-block; opacity: 1;">
+			<li class="mix Cerberus" data-user="tim.everson">
 				<div class="content">
-					<h5>Theo</h5>
-					<div class="spinner wf">
-						<span class="side s_left">
-							<span class="fill"></span>
-						</span>
-						<span class="side s_right">
-							<span class="fill"></span>
-						</span>
-					</div>
-					<div class="img_wrapper anim150 loaded" style="background-image: url(http://mixitup.io/im/theo.jpg);">
-						<img src="http://mixitup.io/im/theo.jpg" onload="imgLoaded($(this))">
+					<h5>Tim Everson</h5>
+					<div class="img_wrapper loaded" style="background-image: url(img/tim.everson.jpg);">
+						<img src="img/tim.everson.jpg">
 					</div>
 				</div>
-				<h4>Age: 1</h4>
+				<ul class="skills"><li>JS</li><li>IOS</li><li>Frontend, Man flu some description to explain what you do and who you are</li></ul>
 			</li>
 			
 			<li class="gap ib"></li>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Unsemantic CSS Framework</title>
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<!-- CSS Code -->
+<link rel="stylesheet" href="css/unsemantic-grid.css" />
+
+<link rel="stylesheet" href="css/compile.css">
+<link rel="stylesheet" href="css/mix.css">
+
+
+<!-- JS Code -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="http://mixitup.io/js/dependencies.js"></script>
+<script type="text/javascript" src="http://mixitup.io/js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script> 
+<script src="js/initialization.js"></script>
+
+</head>
+
+
+<body>
+
+<section id="SandBox" class="anim150">
+    <nav class="wrapper ns wf">
+        <div class="set ib">
+            <h5>Filter</h5>
+            <ul>
+                <li class="button filter active" data-role="button" data-filter="all">View All</li>
+                <li class="button filter" data-role="button" data-filter="Architecture">Architecture</li>
+                <li class="button filter" data-role="button" data-filter="Frog3">Frog3</li>
+                <li class="button filter" data-role="button" data-filter="What the Frog">What the Frog</li>
+                <li class="button filter" data-role="button" data-filter="Frogfathers">Frogfathers</li>
+                <li class="button filter" data-role="button" data-filter="Reservoir Frogs">Reservoir Frogs</li>
+            </ul>
+        </div>
+        <div class="set ib">
+            <h5>Sort</h5>
+            <ul>
+                <li class="button sort arrow" data-sort="data-user" data-order="desc"><span>user <div class="arr_desc ib"></div></span></li>
+                <li class="button sort arrow" data-sort="data-user" data-order="asc"><span>user <div class="arr_asc ib"></div></span></li>
+                <li class="button sort" data-sort="random">Randomize</li>
+                <li>
+                    <div class="button ib layout active" id="GoGrid">Grid</div>
+                    <div class="button ib layout" id="GoList">list</div>
+                </li>
+                <li class="break"></li>
+            </ul>
+        </div>
+        <div class="break ib"></div>
+    </nav>
+
+    <div class="wrapper people">
+    </div>
+
+
+</section>
+
+
+
+</body>
+</html>

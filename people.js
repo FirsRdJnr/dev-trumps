@@ -1,7 +1,7 @@
 // http://iviewsource.com/codingtutorials/getting-started-with-javascript-object-notation-json-for-absolute-beginners/
-[
+{ "users":[
      {
-        "Name": "Tom Chapman",
+        "name": "Tom Chapman",
         "Start" : "17/07/2012",
         "Team" : "What the Frog",
         "Position" : "Tech Lead & Team Captain",
@@ -28,4 +28,4 @@
         "Position" : "Ex-Soloutions Arch",
         "Specialities" : "Cycling, Stress ball deconstruction"
     },
-]
+]}

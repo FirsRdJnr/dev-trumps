@@ -1,88 +1,27 @@
-// scrollTo
-$(document).ready(function(){
 
-    $('nav a,footer a.up,.top a.up').click(function(e){
+$(document).ready(function() {
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON('people.json', function(data) {
+      $.each( data.users, function( i, item ) {
 
-        $.scrollTo( this.hash || 0, 1500);
-        e.preventDefault();
-    });
+        $('<li class="grid-33 mobile-grid-50">').html('<div class="trump + '+item.Team+'" id="trump'+i+'" data-user="'+item.User+'">' + '<div class="team">' + item.Team + '</div>' + '</div>').appendTo('.people');
+        $('<div class="name">').html('<h2>' + item.Name + '</h2>').appendTo("#trump"+i);
+        $('<div class="post">').html('<p>' + item.Post + '</p>').appendTo("#trump"+i);
+        $("<img>").attr("src", item.Photo).appendTo("#trump"+i);
+        
+        
 
+        var items = [];
+        $.each( item.Spec, function( key, val ) {
+          items.push( "<li>" + val + "</li>" );
+        });
+       
+        $( "<ul/>", {
+          "class": "skills", html: items.join( "" )
+        }).appendTo("#trump"+i);
 
-$("#gallery").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#gallery").offset().top
-    }, 2000);
-});    
-
-// toggle
-
-    $(".toggle_container").hide();
-    $("h4.trigger").click(function(){
-        $(this).toggleClass("active").next().slideToggle("slow");
-        return false;
-    });
-
-// slider
-    $('.work-gal').bxSlider({
-        adaptiveHeight: true,
-        captions: true,
-        nextSelector: '#slider-next',
-        prevSelector: '#slider-prev',
-        nextText: 'Onward →',
-        prevText: '← Go back',
-        pagerCustom: '#bx-pager'
+      });
 
     });
-
-// Parallax Scrolling Tutorial
-// For NetTuts+
-
-// Author: Mohiuddin Parekh
-//  http://www.mohi.me
-//  @mohiuddinparekh
-
-    // Cache the Window object
-    $window = $(window);
-
-   $('section[data-type="background"]').each(function(){
-        var $bgobj = $(this); // assigning the object
-
-        $(window).scroll(function() {
-
-            // Scroll the background at var speed
-            // the yPos is a negative value because we're scrolling it UP!
-            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-
-            // Put together our final background position
-            var coords = '50% '+ yPos + 'px';
-
-            // Move the background
-            $bgobj.css({ backgroundPosition: coords });
-
-        }); // window scroll Ends
-    });
-
 });
-
-// email form
-function checkForm() {
- document.form.Email.value = " " + document.form.Email.value;
-
-  if (document.form.Name.value == "") {
-      alert('The Name field is empty!'); return false; }
-
-  if (document.form.Company.value == "") {
-      alert('The Company field is empty!'); return false; }
-
-  mail = document.form.Email.value;
-  if ((mail.indexOf('@') == -1) || (mail.indexOf('.') == -1)) {
-      alert('The E-mail address is invalid!'); return false; }
-
-  if (document.form.Query.value.length > 250) {
-      alert('The Comments / Query is too long!'); return false; }
-
-  window.setTimeout("history.back(-1)",2000);
-  return true;
- }
-
 

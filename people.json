@@ -1,0 +1,73 @@
+
+{ "users":[
+     {
+        "User" : "tom.chapman",
+        "Name" : "Tom Chapman",
+        "Start": "17/07/2012",
+        "Dept" : "Development",
+        "Team" : "What the Frog",
+        "Post" : "Tech Lead & Team Captain",
+        "Spec" : {
+                    "fir":"PhP",
+                    "sec":"git",
+                    "des":"some description to explain what you do and who you are"
+                },
+        "Photo": "img/tom.chapman.png"
+    },
+    {
+        "User" : "victoria.baron",
+        "Name" : "V Baron",
+        "Start": "11/10/2011",
+        "Dept" : "Architecture",
+        "Team" : "Architecture",
+        "Post" : "Imp Arch",
+        "Spec" : {
+                    "fir":"CSS/LESS",
+                    "sec":"HTML",
+                    "des":"some description to explain what you do and who you are"
+                },
+        "Photo": "img/victoria.baron.png"
+    },
+    {
+        "User" : "lee.mills",
+        "Name" : "Lee Mills",
+        "Start": "01/03/2012",
+        "Dept" : "Architecture",
+        "Team" : "Architecture",
+        "Post" : "Architecture Team Lead",
+        "Spec" : {
+                    "fir":"JS",
+                    "sec":"IOS",
+                    "des":"Frontend, Man flu some description to explain what you do and who you are"
+                },
+        "Photo": "img/lee.mills.jpg"
+    },
+    {
+        "User" : "rob.peckett",
+        "Name" : "el Scawp",
+        "Start": "07/04/2008",
+        "Dept" : "Frog3",
+        "Team" : "Frog3",
+        "Post" : "Frog3 Team Lead",
+        "Spec" : {
+                    "fir":"Legacy PhP",
+                    "sec":"Bugs",
+                    "des":"some description to explain what you do and who you are"
+                },
+        "Photo": "img/rob.peckett.jpg"
+    },
+    {
+        "User" : "dave.dangerous",
+        "Name" : "Dangerous Judas Dave",
+        "Start": "18/01/2013",
+        "Dept" : "Architecture",
+        "Team" : "Architecture",
+        "Post" : "Ex-Soloutions Arch",
+        "Spec" : {
+                    "fir":"Cycling",
+                    "sec":"Stress ball deconstruction",
+                    "des":"some description to explain what you do and who you are"
+                },
+        "Photo": "img/dave.dangerous.jpg"
+    }
+]}

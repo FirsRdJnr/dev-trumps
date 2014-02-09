@@ -277,6 +277,69 @@ body pre,
 body code {
   font-family: "DejaVu Sans Mono", Monaco, Consolas, monospace;
 }
+hr {
+  border: 0 #cccccc solid;
+  border-top-width: 1px;
+  clear: both;
+  height: 1px;
+  background: white;
+}
+.pull-right {
+  float: right!important;
+}
+.pull-left {
+  float: left!important;
+}
+.people {
+  padding-top: 30px;
+}
+.people .trump {
+  background: url('../img/bg.png') 0 0 repeat;
+  padding: 4%;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid #0071b9;
+}
+.people .trump .team {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  background: #ecbe13;
+  text-align: center;
+  margin-left: -100%;
+  padding-top: 100px;
+  margin-top: -70px;
+  padding-bottom: 10px;
+}
+.people .trump h2 {
+  font-size: 16px;
+  text-align: center;
+  margin-top: -50px;
+  margin-bottom: auto;
+}
+.people .trump .post {
+  text-align: center;
+  background: white;
+}
+.people .trump .post p {
+  margin-bottom: 8px;
+}
+.people .trump img {
+  width: 100%;
+}
+.people .trump .skills {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.people .trump .skills li {
+  background: white;
+  margin-bottom: 3px;
+  padding: 2px 8px;
+}
 @media screen and (max-width: 767px) {
   body {
     padding: 0;

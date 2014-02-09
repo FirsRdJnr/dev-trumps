@@ -21,16 +21,62 @@ hr {
 
 
 // }
-section {
-    padding-top: 300px;
-    .para {
-        background: @ltgrey;
-        position: absolute;
-        width: 100%;
+.people {
 
-        .me {
-            font-family: 'consolasregular';
-            color: @white;
+    padding-top: 30px;
+
+    .trump {
+        background: url('../img/bg.png') 0 0 repeat;
+        padding: 4%;
+        margin-top: 20px;
+        overflow: hidden;
+        border-radius: 20px;
+        border: 1px solid #0071b9;
+
+        .team {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+            background: #ecbe13;
+            text-align: center;
+            margin-left: -100%;
+            padding-top: 100px;
+            margin-top: -70px;
+            padding-bottom: 10px;
         }
+
+        h2 {
+            font-size: 16px;
+            text-align: center;
+            margin-top: -50px;
+            margin-bottom: auto;
+        }
+        .post{
+            text-align: center;
+            background: #fff;
+
+            p {
+                margin-bottom: 8px;
+            }
+        }
+
+        img {
+            width: 100%;
+            
+        }
+        .skills {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            
+            li {
+                background: #fff;
+                margin-bottom: 3px;
+                padding: 2px 8px;
+            }
+        }
+        
     }
 }
