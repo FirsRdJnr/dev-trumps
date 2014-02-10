@@ -3,37 +3,38 @@
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <title>Unsemantic CSS Framework</title>
 
 <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
 <!-- CSS Code -->
-<link rel="stylesheet" href="css/unsemantic-grid.css" />
-
+<!-- <link rel="stylesheet" href="css/unsemantic-grid.css" /> -->
 <link rel="stylesheet" href="css/compile.css">
-<link rel="stylesheet" href="css/mix.css">
+<!-- <link rel="stylesheet" href="css/new.css"> -->
+<!-- <link rel="stylesheet" href="section.css"> -->
 
 
 <!-- JS Code -->
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="http://mixitup.io/js/dependencies.js"></script>
-<script type="text/javascript" src="http://mixitup.io/js/jquery.mixitup.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script> 
+<script type="text/javascript" src="js/jquery.mixitup.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <script src="js/initialization.js"></script>
 
 </head>
 
 
+</head>
+
 <body>
 
-<section id="SandBox" class="anim150">
+<section id="devs">
     <nav class="wrapper ns wf">
         <div class="set ib">
-            <h5>Filter</h5>
+            <h1>Team</h1>
             <ul>
                 <li class="button filter active" data-role="button" data-filter="all">View All</li>
                 <li class="button filter" data-role="button" data-filter="Architecture">Architecture</li>
@@ -41,10 +42,24 @@
                 <li class="button filter" data-role="button" data-filter="What the Frog">What the Frog</li>
                 <li class="button filter" data-role="button" data-filter="Frogfathers">Frogfathers</li>
                 <li class="button filter" data-role="button" data-filter="Reservoir Frogs">Reservoir Frogs</li>
+                <li class="button filter" data-role="button" data-filter="Cerberus">Cerberus</li>
             </ul>
         </div>
         <div class="set ib">
-            <h5>Sort</h5>
+            <h1>skills</h1>
+            <ul>
+                <li class="button filter active" data-role="button" data-filter="js">js</li>
+                <li class="button filter" data-role="button" data-filter="php">php</li>
+                <li class="button filter" data-role="button" data-filter="css">css</li>
+                <li class="button filter" data-role="button" data-filter="html">html</li>
+                <li class="button filter" data-role="button" data-filter="ios">ios</li>
+                <li class="button filter" data-role="button" data-filter="build">build</li>
+                <li class="button filter" data-role="button" data-filter="git">git</li>
+                <li class="button filter" data-role="button" data-filter="db">db</li>
+            </ul>
+        </div>
+        <div class="set ib">
+            <h1>Sort</h1>
             <ul>
                 <li class="button sort arrow" data-sort="data-user" data-order="desc"><span>user <div class="arr_desc ib"></div></span></li>
                 <li class="button sort arrow" data-sort="data-user" data-order="asc"><span>user <div class="arr_asc ib"></div></span></li>
@@ -56,16 +71,19 @@
                 <li class="break"></li>
             </ul>
         </div>
-        <div class="break ib"></div>
     </nav>
 
-    <div class="wrapper people">
+
+    <div class="wrapper">
+        <ul class="people">
+
+            <li class="gap ib"></li>
+            <li class="gap ib"></li>
+            <li class="gap ib"></li>
+            <li class="break ib"></li>
+        </ul>
     </div>
-
-
 </section>
-
-
 
 </body>
 </html>

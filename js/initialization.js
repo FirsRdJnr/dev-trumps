@@ -4,11 +4,17 @@ $(document).ready(function() {
   $.getJSON('people.json', function(data) {
       $.each( data.users, function( i, item ) {
 
-        $('<li class="grid-33 mobile-grid-50">').html('<div class="trump + '+item.Team+'" id="trump'+i+'" data-user="'+item.User+'">' + '<div class="team">' + item.Team + '</div>' + '</div>').appendTo('.people');
-        $('<div class="name">').html('<h2>' + item.Name + '</h2>').appendTo("#trump"+i);
-        $('<div class="post">').html('<p>' + item.Post + '</p>').appendTo("#trump"+i);
-        $("<img>").attr("src", item.Photo).appendTo("#trump"+i);
-        
+        $('<li class="mix '+item.Team+' '+item.Spec.fir+' '+item.Spec.sec+'  mix_all" data-user="'+item.User+'"  id="trump'+i+'" style="display: inline-block; opacity: 1;">').html(
+          '<div class="team">' + item.Team + '</div>'
+          ).prependTo('.people');
+
+        $('<div class="content">').html(
+          '<h5>' + item.Name + '</h5>' +
+          '<p>' + item.Post + '</p>' +
+          '<div class="img_wrapper loaded" style="background-image: url('+item.Photo+');"><img src="'+item.Photo+'"></div>'
+          ).appendTo("#trump"+i);
+
+        // $("<img>").attr("src", item.Photo).appendTo("#trump"+i);      
         
 
         var items = [];
