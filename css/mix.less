@@ -176,7 +176,7 @@
             -o-transition: max-width 500ms ease-in-out, height 500ms ease-in-out;
             transition: max-width 500ms ease-in-out, height 500ms ease-in-out;
         }
-        .mix {
+        .mix, .gap {
             display: none;
             opacity: 0;
             background: @blue url(../img/dev-trumps.png);
@@ -215,13 +215,13 @@
 
             .content {
                 position: relative;
-                padding-top: 100%;
+                padding-top: 90%;
                 overflow: hidden;
                 border-radius: 6px;
 
-                h5 {
+                 h5{
                     position: absolute;
-                    top: 0;
+                    top: -20px;
                     right: 0;
                     text-transform: uppercase;
                     color: @dkgrey;
@@ -235,6 +235,11 @@
                     background: @white;
                     padding: 10px 20px;
                     border-radius: 4px;
+
+                    small {
+                        display: block;
+                        margin-top: 6px;
+                    }
                 }
                 .img_wrapper {
                     position: absolute;

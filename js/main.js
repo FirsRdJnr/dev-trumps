@@ -15,6 +15,35 @@ var firstrun = true,
     list = false,
     clickEv = 'click';
 
+
+
+function card() {
+    return $.getJSON('people.json', function(data) {
+        $.each( data.users, function( i, item ) {
+            var card;
+
+            card = $('<li class="mix '+item.Team+' '+item.Spec.fir+' '+item.Spec.sec+'" data-user="'+item.User+'">').html('<div class="team">' + item.Team + '</div>')
+
+            $('<div class="content">').html('<h5>' + item.Name + '<small>' + item.Post + '</small>' +'</h5>' +
+              '<div class="img_wrapper loaded" style="background-image: url('+item.Photo+');"><img src="'+item.Photo+'"></div>').appendTo(card);
+
+            var items = [];
+            $.each( item.Spec, function( key, val ) {
+                items.push( "<li>" + val + "</li>" );
+            });
+
+            $( "<ul/>", {"class": "skills", html: items.join( "" )}).appendTo(card);
+
+
+
+            $('.people').prepend(" ").prepend(card)
+
+          });
+
+
+        });
+
+}
 function mixdevs(){
 
     // INSTANTIATE MIXITUP ON devs
@@ -54,14 +83,6 @@ function mixdevs(){
     });
 }
 
-/* BACK TO TOP BUTTON */
-function backToTop(){
-    var ww = $(window).width();
-    var bttMar = ((ww - 860) / 2) - 80;
-    $('#BackToTop').css('right',bttMar+'px')
-}
-
-
 
 /* ====== EVENT HANDLERS ====== */
 
@@ -100,13 +121,13 @@ $(function(){
         clickEv = 'touchclick';
     };
 
-    /* POSITION BACK TO TOP BUTTON */
-    backToTop();
-
     /* INSTANTIATE devs */
-    mixdevs();
+    $.when(card()).done(function(){
+        /* INSTANTIATE devs */
+        mixdevs();
 
-    /* EVENT HANDLERS */
-    eventHandlers();
-
+        /* EVENT HANDLERS */
+        eventHandlers();
+    }
+)
 });
