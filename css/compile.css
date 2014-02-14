@@ -7,7 +7,7 @@
   }
 }
 @font-face {
-  font-family: 'blackoutmidnight';
+  font-family: 'code';
   src: url('../font/code/code_bold-webfont.eot');
   src: url('../font/code/code_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../font/code/code_bold-webfont.woff') format('woff'), url('../font/code/code_bold-webfont.ttf') format('truetype'), url('../font/code/code_bold-webfont.svg#code_boldregular') format('svg');
   font-weight: normal;
@@ -210,7 +210,7 @@ body h1 {
   line-height: 78px;
   margin-top: 26px;
   margin-bottom: 26px;
-  font-family: 'blackoutmidnight';
+  font-family: 'code';
   color: #93a42a;
   -webkit-animation: hue 8s infinite linear;
   background: -webkit-linear-gradient(92deg, #7db51c, #93a42a);
@@ -222,15 +222,17 @@ body h2 {
   line-height: 26px;
   margin-top: 26px;
   margin-bottom: 26px;
-  font-family: 'blackoutmidnight';
-  color: #77715d;
+  font-family: 'code';
+  color: #005580;
+  /*-webkit-animation: hue 8s infinite linear;*/
+
 }
 body h3 {
   font-size: 18px;
   line-height: 26px;
   margin-top: 26px;
   margin-bottom: 0;
-  font-family: 'blackoutmidnight';
+  font-family: 'code';
   color: #818078;
 }
 body h4,
@@ -239,7 +241,7 @@ body h6 {
   line-height: 26px;
   margin-top: 26px;
   margin-bottom: 0px;
-  font-family: 'blackoutmidnight';
+  font-family: 'code';
   font-weight: bold;
 }
 body h4 {
@@ -276,6 +278,29 @@ body aside {
 body pre,
 body code {
   font-family: "DejaVu Sans Mono", Monaco, Consolas, monospace;
+}
+hr {
+  border: 0 #cccccc solid;
+  border-top-width: 1px;
+  clear: both;
+  height: 1px;
+  background: #ffffff;
+}
+.pull-right {
+  float: right!important;
+}
+.pull-left {
+  float: left!important;
+}
+.header {
+  background: #0c75b2;
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+.header h1 {
+  font-size: 170px;
+  line-height: 1;
 }
 #devs {
   padding: 0 0 20px 0;
@@ -319,7 +344,7 @@ body code {
   text-align: center;
   line-height: 36px;
   font-size: 13px;
-  color: #898989;
+  color: #f2f2f2;
   font-weight: 400;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -327,19 +352,24 @@ body code {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
+#devs .wrapper .button.active {
+  background: #003550;
+}
 #devs .wrapper .button.layout {
-  width: 38px;
+  width: 46%;
   height: 33px;
-  padding-top: 4px;
   overflow: hidden;
   margin-right: 3%;
   vertical-align: top;
 }
+#devs .wrapper .button.layout:nth-child(2) {
+  margin-right: 0;
+}
 #devs .wrapper .button.layout:hover li {
-  background: #ccc;
+  background: #003550;
 }
 #devs .wrapper .button.layout.active li {
-  background: #aedf16;
+  background: #003550;
 }
 #devs .wrapper .button.layout ul {
   text-align: center;
@@ -349,7 +379,7 @@ body code {
   width: 8px;
   height: 8px;
   margin: 3px;
-  background: #666;
+  background: #003550;
   vertical-align: top;
   -webkit-transition: all 150ms ease-in-out;
   -moz-transition: all 150ms ease-in-out;
@@ -417,6 +447,18 @@ body code {
 #devs .wrapper .button .active .arr_asc::before {
   border-bottom-color: #121212;
 }
+#devs .wrapper .skill .button {
+  width: 30%;
+}
+#devs .wrapper .gl {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  height: 36px;
+  width: 48%;
+  margin-bottom: 4%;
+  margin-left: 2%;
+}
 #devs .wrapper ul {
   text-align: justify;
   list-style-type: none;
@@ -472,6 +514,7 @@ body code {
   margin-bottom: -70px;
   position: relative;
   z-index: 9999;
+  color: #005580;
 }
 #devs .wrapper .mix .content,
 #devs .wrapper .gap .content {
@@ -486,7 +529,7 @@ body code {
   top: -20px;
   right: 0;
   text-transform: uppercase;
-  color: #818078;
+  color: #005580;
   font-size: 14px;
   line-height: 1em;
   font-weight: 700;
@@ -502,6 +545,7 @@ body code {
 #devs .wrapper .gap .content h5 small {
   display: block;
   margin-top: 6px;
+  font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
 }
 #devs .wrapper .mix .content .img_wrapper,
 #devs .wrapper .gap .content .img_wrapper {
@@ -545,6 +589,38 @@ body code {
   margin-bottom: 4px;
   padding: 5px 10px;
 }
+#devs .wrapper .mix .skills li:nth-child(3),
+#devs .wrapper .gap .skills li:nth-child(3) {
+  height: 100px;
+  overflow: hidden;
+}
+#devs .wrapper .mix .info,
+#devs .wrapper .gap .info {
+  text-align: center;
+  margin-top: -20px;
+}
+#devs .wrapper .mix .info .start,
+#devs .wrapper .gap .info .start {
+  background: #f2f2f2;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  padding: 5px 2%;
+  width: 25%;
+  float: left;
+}
+#devs .wrapper .mix .info .email,
+#devs .wrapper .gap .info .email {
+  background: #f2f2f2;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  padding: 5px 2%;
+  width: 65%;
+  float: right;
+}
+#devs .wrapper .mix .info .email a,
+#devs .wrapper .gap .info .email a {
+  color: #005580;
+}
 #devs .wrapper .mix.full_width,
 #devs .wrapper .gap.full_width {
   position: relative;
@@ -564,6 +640,27 @@ body code {
   -o-box-shadow: none;
   box-shadow: none;
 }
+#devs .wrapper .mix.full_width .team,
+#devs .wrapper .gap.full_width .team {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  text-align: center;
+  margin-left: 293px;
+  padding-top: 0;
+  margin-top: 2px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
+  position: absolute;
+  z-index: 9999;
+  color: #005580;
+  padding: 25px 0;
+  height: 30px;
+  width: 120px;
+  border-radius: 4px;
+}
 #devs .wrapper .mix.full_width .content,
 #devs .wrapper .gap.full_width .content {
   max-width: 120px;
@@ -571,6 +668,7 @@ body code {
   padding-top: 80px;
   background: none;
   border: 0;
+  margin-top: -4px;
   -webit-box-shadow: none;
   -moz-box-shadow: none;
   -ms-box-shadow: none;
@@ -592,9 +690,11 @@ body code {
 #devs .wrapper .mix.full_width .content h5,
 #devs .wrapper .gap.full_width .content h5 {
   left: 130px;
-  width: 150px;
-  top: 4px;
-  background: transparent;
+  width: 116px;
+  top: -20px;
+  background: #f2f2f2;
+  text-align: left;
+  height: 60px;
   letter-spacing: 0;
   font-size: 16px;
   text-transform: none;
@@ -603,23 +703,57 @@ body code {
 #devs .wrapper .gap.full_width .skills {
   display: block;
   position: absolute;
-  top: 12px;
+  top: 8px;
   right: 10px;
-  width: 65%;
+  left: 430px;
   line-height: 26px;
   letter-spacing: 0;
   font-weight: 400;
   font-size: 14px;
   text-transform: none;
-  list-style-type: disc;
-  background: transparent;
+  background: #f2f2f2;
+  margin-right: 184px;
+  border-radius: 4px;
+  height: 80px;
 }
 #devs .wrapper .mix.full_width .skills li,
 #devs .wrapper .gap.full_width .skills li {
-  list-style-type: disc;
-  float: left;
   margin-right: 40px;
+  margin-bottom: 0;
   background: transparent;
+}
+#devs .wrapper .mix.full_width .skills li:last-child,
+#devs .wrapper .gap.full_width .skills li:last-child {
+  display: none;
+}
+#devs .wrapper .mix.full_width .info,
+#devs .wrapper .gap.full_width .info {
+  text-align: center;
+  margin-top: -73px;
+  float: right;
+}
+#devs .wrapper .mix.full_width .info .start,
+#devs .wrapper .gap.full_width .info .start {
+  background: #f2f2f2;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  padding: 5px 2%;
+  width: 170px;
+  float: right;
+}
+#devs .wrapper .mix.full_width .info .email,
+#devs .wrapper .gap.full_width .info .email {
+  background: #f2f2f2;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  padding: 5px 2%;
+  width: 170px;
+  float: right;
+  clear: right;
+}
+#devs .wrapper .mix.full_width .info .email a,
+#devs .wrapper .gap.full_width .info .email a {
+  color: #005580;
 }
 #devs .wrapper .gap {
   display: inline-block;
@@ -640,7 +774,7 @@ body code {
   }
 }
 body:not(.touch) #devs .wrapper .button:hover {
-  background: #161616;
+  background: #003550;
 }
 body:not(.touch) #devs .wrapper .button:not(.slider):hover {
   color: #fff;

@@ -45,7 +45,7 @@
             text-align: center;
             line-height: 36px;
             font-size: 13px;
-            color: #898989;
+            color: @white;
             font-weight: 400;
 
             -webkit-border-radius: 5px;
@@ -53,17 +53,20 @@
             -ms-border-radius: 5px;
             -o-border-radius: 5px;
             border-radius: 5px;
+            &.active { background: #003550;}
 
             &.layout {
-                width: 38px;
+                width: 46%;
                 height: 33px;
-                padding-top: 4px;
                 overflow: hidden;
                 margin-right: 3%;
                 vertical-align: top;
+                &:nth-child(2) {
+                    margin-right: 0;
+                }
 
-                &:hover li { background: #ccc;}
-                &.active li { background: #aedf16;}
+                &:hover li { background: #003550;}
+                &.active li { background: #003550;}
 
                 ul {
                     text-align: center;
@@ -73,7 +76,7 @@
                         width: 8px;
                         height: 8px;
                         margin: 3px;
-                        background: #666;
+                        background: #003550;
                         vertical-align: top;
 
                         -webkit-transition: all 150ms ease-in-out;
@@ -154,6 +157,19 @@
                 }
             }
         }
+        .skill .button {
+            width: 30%;
+        }
+        .gl {
+            position: relative;
+            display: inline-block;
+            list-style-type: none;
+            height: 36px;
+            width: 48%;
+            margin-bottom: 4%;
+            margin-left: 2%;
+        }
+
         ul {
             text-align: justify;
             list-style-type: none;
@@ -202,7 +218,7 @@
                 -o-transform: rotate(-45deg);
                 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
-                background: #ecbe13;
+                background: @yellow;
                 text-align: center;
                 margin-left: -100%;
                 padding-top: 100px;
@@ -211,6 +227,7 @@
                 margin-bottom: -70px;
                 position: relative;
                 z-index: 9999;
+                color: @dkblue;
             }
 
             .content {
@@ -224,7 +241,7 @@
                     top: -20px;
                     right: 0;
                     text-transform: uppercase;
-                    color: @dkgrey;
+                    color: @dkblue;
                     font-size: 14px;
                     line-height: 1em;
                     font-weight: 700;
@@ -239,6 +256,7 @@
                     small {
                         display: block;
                         margin-top: 6px;
+                        font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
                     }
                 }
                 .img_wrapper {
@@ -278,6 +296,36 @@
                     border-radius: 4px;
                     margin-bottom: 4px;
                     padding: 5px 10px;
+
+                    &:nth-child(3) {
+                        height: 100px;
+                        overflow: hidden;
+                    }
+                }
+            }
+            .info {
+                text-align: center;
+                margin-top: -20px;
+
+                .start {
+                    background: @white;
+                    border-radius: 4px;
+                    margin-bottom: 4px;
+                    padding: 5px 2%;
+                    width: 25%;
+                    float: left;
+                }
+                .email {
+                    background: @white;
+                    border-radius: 4px;
+                    margin-bottom: 4px;
+                    padding: 5px 2%;
+                    width: 65%;
+                    float: right;
+
+                    a {
+                        color: @dkblue;
+                    }
                 }
             }
             &.full_width {
@@ -300,12 +348,36 @@
                 -o-box-shadow: none;
                 box-shadow: none;
 
+                .team {
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+
+                    // background: @white;
+                    text-align: center;
+                    margin-left: 293px;
+                    padding-top: 0;
+                    margin-top: 2px;
+                    padding-bottom: 0px;
+                    margin-bottom: 0;
+                    position: absolute;
+                    z-index: 9999;
+                    color: @dkblue;
+                    padding: 25px 0;
+                    height: 30px;
+                    width: 120px;
+                    border-radius: 4px;
+                }
+
                 .content {
                     max-width: 120px;
                     overflow: visible;
                     padding-top: 80px;
                     background: none;
                     border: 0;
+                    margin-top: -4px;
 
                     -webit-box-shadow: none;
                     -moz-box-shadow: none;
@@ -325,10 +397,11 @@
                     }
                     h5 {
                         left: 130px;
-                        width: 150px;
-                        top: 4px;
-                        background: transparent;
-
+                        width: 116px;
+                        top: -20px;
+                        background: @white;
+                        text-align: left;
+                        height: 60px;
 
                         letter-spacing: 0;
                         font-size: 16px;
@@ -338,25 +411,60 @@
                 .skills {
                     display: block;
                     position: absolute;
-                    top: 12px;
+                    top: 8px;
                     right: 10px;
-                    width: 65%;
+                    left: 430px;
 
                     line-height: 26px;
                     letter-spacing: 0;
                     font-weight: 400;
                     font-size: 14px;
                     text-transform: none;
-                    list-style-type: disc;
-                    background: transparent;
+
+                    background: @white;
+                    margin-right: 184px;
+                    border-radius: 4px;
+                    height: 80px;
 
                     li {
-                        list-style-type: disc;
-                        float: left;
                         margin-right: 40px;
+                        margin-bottom: 0;
+                        // padding: 0 10px;
                         background: transparent;
+
+                        &:last-child {
+                            display: none;
+                        }
                     }
                 }
+                .info {
+                    text-align: center;
+                    margin-top: -73px;
+                    float: right;
+
+                    .start {
+                        background: @white;
+                        border-radius: 4px;
+                        margin-bottom: 6px;
+                        padding: 5px 2%;
+                        width: 170px;
+                        float: right;
+                    }
+                    .email {
+                        background: @white;
+                        border-radius: 4px;
+                        margin-bottom: 4px;
+                        padding: 5px 2%;
+                        width: 170px;
+                        float: right;
+                        clear: right;
+
+                        a {
+                            color: @dkblue;
+                        }
+                    }
+                }
+
             }
         }
         .gap {
@@ -382,7 +490,7 @@
 }
 
 body:not(.touch) #devs .wrapper .button:hover {
-    background: #161616;
+    background: #003550;
 }
 
 body:not(.touch) #devs .wrapper .button:not(.slider):hover {

@@ -4,7 +4,9 @@
 <meta charset="utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<title>Unsemantic CSS Framework</title>
+<title>Dev Trumps</title>
+
+<link href="img/fav-icon.png" type="image/x-icon" rel="shortcut icon">
 
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -12,17 +14,13 @@
 <![endif]-->
 
 <!-- CSS Code -->
-<!-- <link rel="stylesheet" href="css/unsemantic-grid.css" /> -->
 <link rel="stylesheet" href="css/compile.css">
-<!-- <link rel="stylesheet" href="css/new.css"> -->
-<!-- <link rel="stylesheet" href="section.css"> -->
-
 
 <!-- JS Code -->
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+<script type="text/javascript" src="js/moment-with-langs.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<!-- <script src="js/initialization.js"></script> -->
 
 </head>
 
@@ -31,41 +29,50 @@
 
 <body>
 
+<section class="header">
+    <h1>Dev Trumps</h1>
+</section>
+
 <section id="devs">
     <nav class="wrapper ns wf">
         <div class="set ib">
-            <h1>Team</h1>
-            <ul>
-                <li class="button filter active" data-role="button" data-filter="all">View All</li>
-                <li class="button filter" data-role="button" data-filter="Architecture">Architecture</li>
-                <li class="button filter" data-role="button" data-filter="Frog3">Frog3</li>
-                <li class="button filter" data-role="button" data-filter="What the Frog">What the Frog</li>
-                <li class="button filter" data-role="button" data-filter="Frogfathers">Frogfathers</li>
-                <li class="button filter" data-role="button" data-filter="Reservoir Frogs">Reservoir Frogs</li>
-                <li class="button filter" data-role="button" data-filter="Cerberus">Cerberus</li>
-                <li class="button filter" data-role="button" data-filter="Malaysia">Malaysia</li>
+            <h2>Team</h2>
+            <ul id="team">
+                <li class="button all active" data-role="button" data-filter="all">All</li>
+                <li class="button" data-role="button" data-filter="architecture">Architecture</li>
+                <li class="button" data-role="button" data-filter="frog3">Frog3</li>
+                <li class="button" data-role="button" data-filter="what_the_frog">What the Frog</li>
+                <li class="button" data-role="button" data-filter="frogfathers">FrogFathers</li>
+                <li class="button" data-role="button" data-filter="frogs_of_war">Frogs of War</li>
+                <li class="button" data-role="button" data-filter="lantern">Lantern</li>
+                <li class="button" data-role="button" data-filter="malaysia">Malaysia</li>
+            </ul>
+        </div>
+        <div class="set ib skill">
+            <h2>skills</h2>
+            <ul id="skills">
+                <li class="button" data-role="button" data-filter="js">JS</li>
+                <li class="button" data-role="button" data-filter="php">PHP</li>
+                <li class="button" data-role="button" data-filter="css">CSS</li>
+                <li class="button" data-role="button" data-filter="html">HTML</li>
+                <li class="button" data-role="button" data-filter="ios">iOS</li>
+                <li class="button" data-role="button" data-filter="jmvc">JMVC</li>
+                <li class="button" data-role="button" data-filter="build">Build</li>
+                <li class="button" data-role="button" data-filter="git">git</li>
+                <li class="button" data-role="button" data-filter="db">DB</li>
+                <li class="button" data-role="button" data-filter="ux">UX</li>
+                <li class="button" data-role="button" data-filter="ba">BA</li>
+                <li class="button" data-role="button" data-filter="qa">QA</li>
+                <li class="gap"></li>
             </ul>
         </div>
         <div class="set ib">
-            <h1>skills</h1>
-            <ul>
-                <li class="button filter active" data-role="button" data-filter="js">Javascript</li>
-                <li class="button filter" data-role="button" data-filter="PhP">PhP</li>
-                <li class="button filter" data-role="button" data-filter="CSS">CSS</li>
-                <li class="button filter" data-role="button" data-filter="HTML">HTML</li>
-                <li class="button filter" data-role="button" data-filter="IOS">IOS</li>
-                <li class="button filter" data-role="button" data-filter="Build">Build</li>
-                <li class="button filter" data-role="button" data-filter="git">git</li>
-                <li class="button filter" data-role="button" data-filter="db">Database</li>
-            </ul>
-        </div>
-        <div class="set ib">
-            <h1>Sort</h1>
+            <h2>Sort</h2>
             <ul>
                 <li class="button sort arrow" data-sort="data-user" data-order="desc"><span>user <div class="arr_desc ib"></div></span></li>
                 <li class="button sort arrow" data-sort="data-user" data-order="asc"><span>user <div class="arr_asc ib"></div></span></li>
                 <li class="button sort" data-sort="random">Randomize</li>
-                <li>
+                <li class="gl">
                     <div class="button ib layout active" id="GoGrid">Grid</div>
                     <div class="button ib layout" id="GoList">list</div>
                 </li>

@@ -20,21 +20,35 @@ var firstrun = true,
 function card() {
     return $.getJSON('people.json', function(data) {
         $.each( data.users, function( i, item ) {
-            var card;
+            var card,
+                curdate = new Date().getTime(),
+                momentTime = moment.duration(curdate-moment(item.Start, "DDMMYYYY").valueOf()),
+                momentYears = momentTime.years(),
+                momentMonths = momentTime.months(),
+                start = "";
 
-            card = $('<li class="mix '+item.Team+' '+item.Spec.fir+' '+item.Spec.sec+'" data-user="'+item.User+'">').html('<div class="team">' + item.Team + '</div>')
+            if (momentYears>0) {
+                start += momentYears + "Y"+ " ";
+            }
+
+            if (momentMonths>0) {
+                start += momentMonths + "M"+ " ";
+            }
+
+
+            card = $('<li class="mix '+space2_(item.Team)+' '+space2_(item.Spec.fir)+' '+space2_(item.Spec.sec)+'" data-user="'+item.Name+'">').html('<div class="team">' + item.Team + '</div>')
 
             $('<div class="content">').html('<h5>' + item.Name + '<small>' + item.Post + '</small>' +'</h5>' +
               '<div class="img_wrapper loaded" style="background-image: url('+item.Photo+');"><img src="'+item.Photo+'"></div>').appendTo(card);
 
             var items = [];
             $.each( item.Spec, function( key, val ) {
-                items.push( "<li>" + val + "</li>" );
+                items.push( "<li title="+ val +">" + val + "</li>" );
             });
 
             $( "<ul/>", {"class": "skills", html: items.join( "" )}).appendTo(card);
 
-
+            $('<div class="info">').html('<p class="start">' + start +'</p>' + '<p class="email"> Email: <a href="mailto:'+ item.Email +'@frogtrade.com">' + item.Email +'</a></p>').appendTo(card);
 
             $('.people').prepend(" ").prepend(card)
 
@@ -42,13 +56,25 @@ function card() {
 
 
         });
+}
 
+function space2_(str){
+    return str.split(" ").join("_").toLowerCase();
 }
 function mixdevs(){
 
+    var filters = "";
+    $('ul#team .button, ul#skills .button').each(function(){
+        filters += $(this).data('filter') + " ";
+    })
+
     // INSTANTIATE MIXITUP ON devs
     $('#devs').mixitup({
-        buttonEvent: clickEv,
+        buttonEvent: "click",
+        multiFilter: true,
+        showOnLoad: filters.trim(),
+        sortOnLoad: ['data-user', 'desc'],
+        sortSelector: '.sort',
         onMixStart: function(config){
 
             // PAUSE LOGO ON devs ACTIVITY
@@ -68,8 +94,12 @@ function mixdevs(){
             // UPDATE SPEED
             config.transitionSpeed = liveSpeed;
 
+
+
             return config;
         },
+
+
         onMixEnd: function(config){
 
             // ADD LIST STYING
@@ -108,18 +138,34 @@ function eventHandlers(){
 
 }
 
+function setupButtons() {
+    $("ul#team li.button, ul#skills li.button").on("click", function(){
+        var teamfilter = "",
+            skillfilter = "";
+
+        if ($(this).hasClass("all")) {
+            $('ul#team .button.active:not(.all)').removeClass("active")
+        } else {
+            $('ul#team .button.active.all').removeClass("active")
+        }
+
+        $(this).toggleClass("active")
+
+        $('ul#team .button.active').each(function(){
+            teamfilter += $(this).data('filter') + " ";
+        })
+
+        $('ul#skills .button.active').each(function(){
+            skillfilter += $(this).data('filter') + " ";
+        })
+
+        $('#devs').mixitup('filter', [teamfilter.trim(), skillfilter.trim()])
+    });
+}
+
 /* ====== ON DOCU READY ====== */
 
 $(function(){
-
-    /* DETECT PLATFORM */
-    $.support.touch = 'ontouchend' in document;
-
-    if ($.support.touch) {
-        touch = true;
-        $('body').addClass('touch');
-        clickEv = 'touchclick';
-    };
 
     /* INSTANTIATE devs */
     $.when(card()).done(function(){
@@ -128,6 +174,8 @@ $(function(){
 
         /* EVENT HANDLERS */
         eventHandlers();
+
+        setupButtons();
     }
 )
 });
