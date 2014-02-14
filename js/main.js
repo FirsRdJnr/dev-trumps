@@ -28,11 +28,11 @@ function card() {
                 start = "";
 
             if (momentYears>0) {
-                start += momentYears + "Y"+ " ";
+                start += momentYears + "yr"+ " ";
             }
 
             if (momentMonths>0) {
-                start += momentMonths + "M"+ " ";
+                start += momentMonths + "mth"+ " ";
             }
 
 
