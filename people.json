@@ -38,7 +38,7 @@
         "Spec" : {
                     "fir":"JS",
                     "sec":"CSS",
-                    "des":""
+                    "des":"I am here to look after the best interests of the people and the business.  I am always vox populi even when I am expected to be vox Dei."
                 },
         "Photo": "img/adam.hepton.jpg"
     },
@@ -62,7 +62,7 @@
         "Start": "02/04/2012",
         "Dept" : "Frog3",
         "Team" : "Frog3",
-        "Post" : "Frog3",
+        "Post" : "Developer",
         "Spec" : {
                     "fir":"PHP",
                     "sec":"JS",
@@ -79,8 +79,8 @@
         "Post" : "Solutions Arch",
         "Spec" : {
                     "fir":"JS",
-                    "sec":"JMVC",
-                    "des":"Drink all the beers and something something something"
+                    "sec":"node",
+                    "des":"Bringing education solutions to the fine people of the UK and Malaysia, one project at a time. Lateral thinker and coffee drinker, amongst other substances."
                 },
         "Photo": "img/alan.burgoyne.jpg"
     },
@@ -118,11 +118,11 @@
         "Start": "10/04/2012",
         "Dept" : "Architecture",
         "Team" : "Architecture",
-        "Post" : "Partner Specialist",
+        "Post" : "Integrations Developer",
         "Spec" : {
                     "fir":"PHP",
-                    "sec":"Intergration",
-                    "des":"PHP, third party integrations and being the butt of most department trolling"
+                    "sec":"Integration",
+                    "des":"Parrots, PHP, third party integrations and being the butt of most department trolling"
                 },
         "Photo": "img/chris.murphy.jpg"
     },
@@ -160,7 +160,7 @@
         "Start": "14/01/2008",
         "Dept" : "Frog3",
         "Team" : "Frog3",
-        "Post" : "Frog3",
+        "Post" : "Integrations Developer",
         "Spec" : {
                     "fir":"C#",
                     "sec":"MIS",
@@ -169,7 +169,7 @@
         "Photo": "img/craig.saville.jpg"
     },
     {
-        "Name" : "Dangerous 'Judas' Dave",
+        "Name" : "Dave Seddon",
         "Email": "david.seddon",
         "Start": "21/01/2013",
         "Dept" : "Architecture",
@@ -202,7 +202,7 @@
         "Start": "29/04/2013",
         "Dept" : "Development",
         "Team" : "Frogs of War",
-        "Post" : "Team Lead",
+        "Post" : "Tech Lead Developer",
         "Spec" : {
                     "fir":"JS",
                     "sec":"git",
@@ -211,12 +211,26 @@
         "Photo": "http://www.playingbythebook.net/wp-content/uploads//a_frog_prince_deney_terrio.jpg"
     },
     {
+        "Name" : "David Lambert",
+        "Email": "david.lambert",
+        "Start": "01/11/2012",
+        "Dept" : "BA",
+        "Team" : "What the Frog",
+        "Post" : "BA",
+        "Spec" : {
+                    "fir":"BA",
+                    "sec":"BA",
+                    "des":"Asking obvious questions (e.g. what should it do?), documenting stuff."
+                },
+        "Photo": "img/david.lambert.jpg"
+    },
+    {
         "Name" : "David Lawton",
         "Email": "david.lawton",
         "Start": "17/02/2014",
         "Dept" : "Development",
         "Team" : "Frogs of War",
-        "Post" : "Developer",
+        "Post" : "Tech Lead Developer",
         "Spec" : {
                     "fir":"??",
                     "sec":"??",
@@ -225,12 +239,26 @@
         "Photo": "img/david.lawton.gif"
     },
     {
-        "Name" : "el Scawp",
+        "Name" : "Ramsey AlChalaby",
+        "Email": "ramsey.alchalaby",
+        "Start": "01/10/2012",
+        "Dept" : "PM",
+        "Team" : "PM",
+        "Post" : "Project Manager",
+        "Spec" : {
+                    "fir":"Project Management",
+                    "sec":"Asking Tough Questions",
+                    "des":"Attempting to give focus, clarity and structure thus allowing the back doors to be smashed off every project!"
+                },
+        "Photo": "img/ramsey.alchalaby.jpg"
+    },
+    {
+        "Name" : "Rob peckett",
         "Email": "rob.peckett",
         "Start": "07/04/2008",
         "Dept" : "Frog3",
         "Team" : "Frog3",
-        "Post" : "Frog3 Team Lead",
+        "Post" : "Tech Lead Developer",
         "Spec" : {
                     "fir":"Legacy PHP",
                     "sec":"Bugs",
@@ -276,7 +304,7 @@
         "Spec" : {
                     "fir":"JS",
                     "sec":"HTML",
-                    "des":"Software developer at FrogAsia. Interests include music, photography, retro gaming and great coffee."
+                    "des":"Front end developer at FrogAsia specialising in JS, HTML and CSS. Interests include music, photography, retro gaming and great coffee."
                 },
         "Photo": "img/james.warwood.jpg"
     },
@@ -304,7 +332,7 @@
         "Spec" : {
                     "fir":"PHP",
                     "sec":"DB",
-                    "des":""
+                    "des":"50% of the time, I work every time."
                 },
         "Photo": "img/lee.fenlan.jpg"
     },
@@ -426,7 +454,7 @@
         "Start": "02/01/2014",
         "Dept" : "Development",
         "Team" : "FrogFathers",
-        "Post" : "Team Lead",
+        "Post" : "Tech Lead Developer",
         "Spec" : {
                     "fir":"PHP",
                     "sec":"JS",
@@ -440,7 +468,7 @@
         "Start": "30/07/2012",
         "Dept" : "Development",
         "Team" : "Lantern",
-        "Post" : "Team Lead",
+        "Post" : "Tech Lead Developer",
         "Spec" : {
                     "fir":"Bugs",
                     "sec":"Build",
@@ -454,13 +482,27 @@
         "Start": "16/07/2012",
         "Dept" : "Development",
         "Team" : "What the Frog",
-        "Post" : "Tech Lead & Team Captain",
+        "Post" : "Tech Lead Developer",
         "Spec" : {
                     "fir":"PHP",
                     "sec":"git",
                     "des":"I'd rather be happily mad than sane and miserable"
                 },
         "Photo": "img/tom.chapman.jpg"
+    },
+    {
+        "Name" : "Tom Norton",
+        "Email": "tom.norton",
+        "Start": "15/01/2007",
+        "Dept" : "R&D",
+        "Team" : "Frogs of War",
+        "Post" : "User Experience Designer",
+        "Spec" : {
+                    "fir":"UX",
+                    "sec":"UI",
+                    "des":"Creating a great user experience and making it look pretty all at the same time."
+                },
+        "Photo": "img/tom.norton.jpg"
     },
     {
         "Name" : "V Baron",

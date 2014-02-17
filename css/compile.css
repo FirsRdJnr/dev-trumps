@@ -299,7 +299,7 @@ hr {
   padding: 50px 0;
 }
 .header h1 {
-  font-size: 170px;
+  font-size: 115px;
   line-height: 1;
 }
 #devs {
@@ -593,6 +593,7 @@ hr {
 #devs .wrapper .gap .skills li:nth-child(3) {
   height: 100px;
   overflow: hidden;
+  text-align: left;
 }
 #devs .wrapper .mix .info,
 #devs .wrapper .gap .info {

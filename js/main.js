@@ -35,6 +35,10 @@ function card() {
                 start += momentMonths + "mth"+ " ";
             }
 
+            if (momentYears == 0 && momentMonths == 0) {
+                start = momentTime.days() + " days"
+            }
+
 
             card = $('<li class="mix '+space2_(item.Team)+' '+space2_(item.Spec.fir)+' '+space2_(item.Spec.sec)+'" data-user="'+item.Name+'">').html('<div class="team">' + item.Team + '</div>')
 
@@ -48,7 +52,9 @@ function card() {
 
             $( "<ul/>", {"class": "skills", html: items.join( "" )}).appendTo(card);
 
-            $('<div class="info">').html('<p class="start">' + start +'</p>' + '<p class="email"> Email: <a href="mailto:'+ item.Email +'@frogtrade.com">' + item.Email +'</a></p>').appendTo(card);
+
+
+            $('<div class="info">').html('<p class="start">' + start +'</p>' + '<p class="email"> Email: <a href="mailto:' + item.Email + (item.Team == 'Malaysia' ? '@frogasia.com' : '@frogtrade.com') + '">' + item.Email +'</a></p>').appendTo(card);
 
             $('.people').prepend(" ").prepend(card)
 
